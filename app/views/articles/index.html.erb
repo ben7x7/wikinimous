@@ -1,5 +1,14 @@
-<% @articles.each do |article| %>
-  <%= article.title %>
-  <%= article.content %>
-  <br>
-<% end %>
+<div class="container">
+  <div class="wrapper-index">
+    <div class="index">
+      <% @articles.each do |article| %>
+        <%= link_to article_path(article) do %>
+          <h3><%= article.title %></h3>
+        <% end %> <br>
+        <%= article.content %>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+</div>
+
