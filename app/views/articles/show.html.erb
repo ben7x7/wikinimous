@@ -1,3 +1,37 @@
-<%= @article.title %>
-<hr>
-<%= @article.content %>
+<div class="container">
+  <div class="wrapper wrapper-show">
+    <div class="title text-center">
+      <h1>Article selected</h1>
+    </div>
+    <div class="show">
+      <h3><%= @article.title %></h3>
+      <hr>
+      <p><%= @article.content %></p>
+    </div>
+    <div class="links">
+      <div class="index-link">
+        <%= link_to articles_path do %>
+          <i class="fas fa-history"></i> Back
+        <% end %>
+      </div>
+      <div class="edit-link">
+        <%= link_to edit_article_path(@article.id) do %>
+          <i class="far fa-edit"></i> Edit
+        <% end %>
+      </div>
+
+      <div class="delete-link">
+        <%= link_to article_path(@article), method: :delete, data: { confirm: "Delete #{@article.title}?"} do %>
+          <i class="far fa-trash-alt"></i> Delete
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
