@@ -4,10 +4,12 @@
   "dependencies": {
     "@rails/webpacker": "^4.0.7",
     "bootstrap": "^4.3.1",
-    "chokidar": "3",
+    "chokidar": "^3",
     "jquery": "3.5.1",
     "popper.js": "^1.15.0",
-    "postcss": "^8.2.10"
+    "postcss": "^8.2.10",
+    "svgo": "^2.7.0",
+    "uuid": "^7"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.7.2"
